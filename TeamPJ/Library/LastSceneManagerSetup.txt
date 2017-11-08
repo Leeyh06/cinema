@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/Scenes/SelectSeat.unity
+- path: Assets/Scenes/SelectSeat 1.unity
   isLoaded: 1
   isActive: 1
