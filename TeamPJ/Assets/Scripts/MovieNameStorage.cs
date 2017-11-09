@@ -4,14 +4,17 @@ using UnityEngine;
 
 public class MovieNameStorage : MonoBehaviour
 {
-    // Use this for initialization
+    public static string movieName;
+
     private void Start()
     {
         DontDestroyOnLoad(this);
+        movieName = Button.movieNamee;
     }
 
     // Update is called once per frame
     private void Update()
     {
+        Debug.Log(movieName); //안됨!!
     }
 }
