@@ -1,4 +1,11 @@
 sceneSetups:
+<<<<<<< HEAD
 - path: Assets/Scenes/SelectSeat 1.unity
+=======
+- path: Assets/Scenes/SelectSeat.unity
+  isLoaded: 0
+  isActive: 0
+- path: Assets/Slider Menu Free_New Edition/Scripts/SeatMove.unity
+>>>>>>> 7063ad29c4cbd72557bfa2df249f992b0feb02ec
   isLoaded: 1
   isActive: 1
