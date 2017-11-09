@@ -6,14 +6,15 @@ using UnityEngine.SceneManagement;
 
 public class ButtonClicked : MonoBehaviour
 {
-    public Text gettext1, gettext2;
+    public static string Textdata;
+    private bool checkedtest;
 
     public void Onclicked()
     {
-        gettext1 = GetComponentInParent<Text>();
-        gettext2 = GetComponentInChildren<Text>();
+        Textdata = GetComponentInParent<Text>().text + GetComponentInChildren<Text>().text;
+        GetComponentInChildren<Text>().color = Color.white;
 
-        Debug.Log(gettext1.text + gettext2.text);
+        //this.
 
         SceneManager.LoadScene(2);
     }
