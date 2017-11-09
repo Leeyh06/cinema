@@ -12,7 +12,7 @@ public class PointPosition : MonoBehaviour
     {
         if (Input.GetButtonDown("Fire1"))
         {
-            Debug.Log(Input.mousePosition); //왼하가 0,0
+            //Debug.Log(Input.mousePosition); //왼하가 0,0
         }
     }
 }
