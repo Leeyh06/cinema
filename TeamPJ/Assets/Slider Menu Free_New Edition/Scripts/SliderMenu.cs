@@ -8,52 +8,53 @@ public enum scrolltype
 {
     Horizontal, Vertical
 }
-//============================End Scroll Type And Scrollbar Direction=================================
 
+//============================End Scroll Type And Scrollbar Direction=================================
 
 //==================================Begin Slides Align (Pro Only)=====================================
 public enum slidesverticalalign
 {
     Top, Middle, Bottom
 }
+
 public enum slideshorizontalalign
 {
     Left, Center, Right
 }
-//========================================End Slides Align============================================
 
+//========================================End Slides Align============================================
 
 //=============================Begin Previous Button Align (Pro Only)=================================
 public enum previousbuttonhorizontalalign
 {
     Left, Center, Right
 }
+
 public enum previousbuttonverticalalign
 {
     Top, Middle, Bottom
 }
-//====================================End Previous Button Align=======================================
 
+//====================================End Previous Button Align=======================================
 
 //===============================Begin Next Button Align (Pro Only)===================================
 public enum nextbuttonhorizontalalign
 {
     Left, Center, Right
 }
+
 public enum nextbuttonverticalalign
 {
     Top, Middle, Bottom
 }
+
 //======================================End Next Button Align=========================================
-
-
 
 public class SliderMenu : MonoBehaviour
 {
-
-
     //=======================================Begin Main Objects===========================================
     public bool MainObjectBlock;
+
     public Canvas SliderMenuCanvas;                                     //Custom Canvas Object (Scroll Object Parent)
     public GameObject ScrollObject;                                         //Object That has Scroll Rect Component (Slides Content Parent)
     public GameObject SlidesContent;                                            //Slides Parent
@@ -62,20 +63,24 @@ public class SliderMenu : MonoBehaviour
 
     //======================================Begin Scroll Settings=========================================
     public bool ScrollSettingsBlock;
+
     public scrolltype ScrollType;                                               //Scroll type is horizontal or vertical
 
     //-------------------------------------------------------------------------------Horizontal scroll bar
     public bool ShowHorizontalScrollbar;                                //Enable or disable horizontal scrollbar
+
     public Scrollbar HorizontalScrollbar;                                   //Horizontal Scrollbar Object
     public slidesverticalalign SlidesVerticalAlign;                                 //Slide's Vertical Align (Pro Only)
 
     //---------------------------------------------------------------------------------Vertical scroll bar
     public bool ShowVerticalScrollbar;                                  //Enable or disable vertical scrollbar
+
     public Scrollbar VerticalScrollbar;                                     //Vertical Scrollbar Object
     public slideshorizontalalign SlidesHorizontalAlign;                                 //Slide's Horizontal Align (Pro Only)
 
     //------------------------------------------------------------------------Scroll With Arrow (Pro Only)
     public bool ScrollWithArrowBlock;
+
     public bool ScrollWithArrow;                                        //Enable Scroll With Arrow Keys
     public bool LeftAndRight;                                           //Enable Scroll With Left And Right Arrow Keys
     public bool HorizontalArrowStepByStep;                              //Step By Step
@@ -83,13 +88,16 @@ public class SliderMenu : MonoBehaviour
     public bool VerticalArrowStepByStep;                                //Step By Step
 
     public float ArrowTransition = 0.1f;                                    //Transition Value
-                                                                            //---------------------------------------------------------------------------------Scroll With Buttons
+
+    //---------------------------------------------------------------------------------Scroll With Buttons
     public bool ScrollWithButtonsBlock;
+
     public bool ScrollWithButtons = true;                   //Enable Scroll With Buttons
     public GameObject ScrollButtons;                                            //Define Scroll Buttons Group Object
 
     //Previous Button
     private GameObject PreviousButtonObject;                                    //For Define Previous Button Object (Automatically)
+
     public Sprite PreviousButtonImage;                                  //Previous Button Image
     public previousbuttonhorizontalalign PreviousButtonHorizontalAlign;                         //Previous Button's Horizontal Align (Pro Only)
     public previousbuttonverticalalign PreviousButtonVerticalAlign;                         //Previous Button's Vertical Align (Pro Only)
@@ -98,6 +106,7 @@ public class SliderMenu : MonoBehaviour
 
     //Next Button
     private GameObject NextButtonObject;                                        //For Define Next Button Object (Automatically)
+
     public Sprite NextButtonImage;                                      //Next Button Image
     public nextbuttonhorizontalalign NextButtonHorizontalAlign;                             //Next Button's Horizontal Align (Pro Only)
     public nextbuttonverticalalign NextButtonVerticalAlign;                             //Next Button's Vertical Align (Pro Only)
@@ -108,13 +117,13 @@ public class SliderMenu : MonoBehaviour
 
     //--------------------------------------------------------------------------------Slider Magnet Effect
     public bool SliderMagnet;                                           //Enable Slider Magnet Effect
+
     public float MagnetTransition;                                      //Transition For Slider Magnet Effect
                                                                         //=======================================End Scroll Settings==========================================
 
-
-
     //======================================Begin Slides Property=========================================
     public bool SlidesPropertyBlock;
+
     public int SlidesInView;                                            //Number Of Slides In View
     public bool DefaultOffset;                                          //Enable Default Offset For Active Slide (Pro Only)
     public int ActiveSlideOffset;                                       //Define Active Slide Offset If Default Offset Is Disabled (Pro Only)
@@ -124,112 +133,129 @@ public class SliderMenu : MonoBehaviour
 
     //=========================================Begin Animation============================================
     public bool AnimationBlock;
+
     //############################################################Begin Previous Slides Animation Settings
     //Position Animation
     public bool PreviousPositionAnimation;
+
     public float PreviousOffset;
     public float PreviousOffsetTransition = 0.1f;
 
     //Scale Animation
     public bool PreviousScaleAnimation;
+
     public Vector2 PreviousScale = new Vector2(1, 1);
     public float PreviousScaleTransition = 0.1f;
 
     //Rotation Animation
     public bool PreviousRotateAnimation;
+
     public Vector3 PreviousRotation = new Vector3(1, 1, 1);
     public float PreviousRotationTransition = 0.1f;
 
     //Color Animation
     public bool PreviousColorAnimation;
+
     public Color PreviousColor = new Color(1, 1, 1, 255);
     public float PreviousColorTransition = 0.1f;
 
     //Blur Animation
     public bool PreviousBlurAnimation;
-    public Material PreviousBlurMaterial;                                   //(Pro Only)								
-    public float PreviousBlurDistance = 0.02f;                  //(Pro Only)				 
+
+    public Material PreviousBlurMaterial;                                   //(Pro Only)
+    public float PreviousBlurDistance = 0.02f;                  //(Pro Only)
     public float PreviousBlurTransition = 0.01f;                    //(Pro Only)
 
     //Order
-    public int PreviousSiblingIndex;                                    //(Pro Only)									
-                                                                        //##############################################################End Previous Slides Animation Settings
+    public int PreviousSiblingIndex;                                    //(Pro Only)
 
+    //##############################################################End Previous Slides Animation Settings
 
     //##############################################################Begin Active Slides Animation Settings
     //Position Animation
     public bool ActivePositionAnimation;
+
     public float ActiveOffset;
     public float ActiveOffsetTransition = 0.1f;
 
     //Scale Animation
     public bool ActiveScaleAnimation;
+
     public Vector2 ActiveScale = new Vector2(1, 1);
     public float ActiveScaleTransition = 0.1f;
 
     //Rotation Animation
     public bool ActiveRotateAnimation;
+
     public Vector3 ActiveRotation = new Vector3(1, 1, 1);
     public float ActiveRotationTransition = 0.1f;
 
     //Color Animation
     public bool ActiveColorAnimation;
+
     public Color ActiveColor = new Color(1, 1, 1, 255);
     public float ActiveColorTransition = 0.1f;
 
     //Blur Animation
     public bool ActiveBlurAnimation;
-    public Material ActiveBlurMaterial;                                     //(Pro Only)								
-    public float ActiveBlurDistance = 0.02f;                    //(Pro Only)					
-    public float ActiveBlurTransition = 0.01f;                  //(Pro Only)					
+
+    public Material ActiveBlurMaterial;                                     //(Pro Only)
+    public float ActiveBlurDistance = 0.02f;                    //(Pro Only)
+    public float ActiveBlurTransition = 0.01f;                  //(Pro Only)
 
     //Order
-    public int ActiveSiblingIndex;                                      //(Pro Only)								
-                                                                        //################################################################End Active Slides Animation Settings
+    public int ActiveSiblingIndex;                                      //(Pro Only)
+
+    //################################################################End Active Slides Animation Settings
 
     //################################################################Begin Next Slides Animation Settings
     //Position Animation
     public bool NextPositionAnimation;
+
     public float NextOffset;
     public float NextOffsetTransition = 0.1f;
 
     //Scale Animation
     public bool NextScaleAnimation;
+
     public Vector2 NextScale = new Vector2(1, 1);
     public float NextScaleTransition = 0.1f;
 
     //Rotation Animation
     public bool NextRotateAnimation;
+
     public Vector3 NextRotation = new Vector3(1, 1, 1);
     public float NextRotationTransition = 0.1f;
 
     //Color Animation
     public bool NextColorAnimation;
+
     public Color NextColor = new Color(1, 1, 1, 255);
     public float NextColorTransition = 0.1f;
 
     //Blur Animation
     public bool NextBlurAnimation;
-    public Material NextBlurMaterial;                                       //(Pro Only)								
-    public float NextBlurDistance = 0.02f;                  //(Pro Only)				
-    public float NextBlurTransition = 0.01f;                    //(Pro Only)				
+
+    public Material NextBlurMaterial;                                       //(Pro Only)
+    public float NextBlurDistance = 0.02f;                  //(Pro Only)
+    public float NextBlurTransition = 0.01f;                    //(Pro Only)
 
     //Order
-    public int NextSiblingIndex;                                        //(Pro Only)								
-                                                                        //##################################################################End Next Slides Animation Settings
-                                                                        //==========================================End Animation=============================================
+    public int NextSiblingIndex;                                        //(Pro Only)
 
+    //##################################################################End Next Slides Animation Settings
+    //==========================================End Animation=============================================
 
     //=====================================Begin Other Properties=========================================
     //Scroll Step
     private float n;                                                        //Use For Calculate Scroll Step
-    private float ScrollStep;                                               //Scroll Step Of Horizontal And Vertical Slider					
+
+    private float ScrollStep;                                               //Scroll Step Of Horizontal And Vertical Slider
     private float k = 0;
     private bool ButtonClicked = false;
     //=======================================End Other Properties=========================================
 
-
-    void Update()
+    private void Update()
     {
         //==================================Begin Calculate Scroll Step Value=================================
         n = Slides.Count - 1;
@@ -239,7 +265,6 @@ public class SliderMenu : MonoBehaviour
         //====================================Begin Horizontal Slider Menu====================================
         if (ScrollType == scrolltype.Horizontal)
         {
-
             //####################################Begin Change Resolution Settings For Slides In View Property
             SliderMenuCanvas.GetComponent<CanvasScaler>().matchWidthOrHeight = 0;
 
@@ -254,7 +279,6 @@ public class SliderMenu : MonoBehaviour
 
             //Automatically Define Horizontal Scrollbar By "HorizontalScrollbar" Value.
             ScrollObject.GetComponent<ScrollRect>().horizontalScrollbar = HorizontalScrollbar;
-
 
             if (ShowHorizontalScrollbar == true)
             {
@@ -364,7 +388,6 @@ public class SliderMenu : MonoBehaviour
                             }
                             //-----------------------------------------------------------------------------End Color Animation
 
-
                             //---------------------------------------------------------------Begin Set Sibilin Of Active Slide
                             Slides[j].gameObject.transform.SetAsLastSibling();
                             //-----------------------------------------------------------------End Set Sibilin Of Active Slide
@@ -393,7 +416,6 @@ public class SliderMenu : MonoBehaviour
                         }
                         //>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>End Active Slide
 
-
                         //>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>Begin Previous Slides
                         else if (j < i)
                         {
@@ -421,8 +443,6 @@ public class SliderMenu : MonoBehaviour
                                 );
                             }
                             //-----------------------------------------------------------------End Previous Position Animation
-
-
 
                             //------------------------------------------------------------------Begin Previous Scale Animation
                             if (PreviousScaleAnimation)
@@ -471,9 +491,6 @@ public class SliderMenu : MonoBehaviour
                                 }
                             }
                             //--------------------------------------------------------------------End Previous Color Animation
-
-
-
                         }
                         //>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>End Previous Slides
 
@@ -552,14 +569,12 @@ public class SliderMenu : MonoBehaviour
                                 }
                             }
                             //------------------------------------------------------------------------End Next Color Animation
-
                         }
                         //>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>End Next Slides
                     }
                 }
             }
             //#######################################End Work On Previous Slides, Active Slide, And Next Slids
-
 
             //#############################################################################Begin Slider Magnet
             if (SliderMagnet)
@@ -598,8 +613,8 @@ public class SliderMenu : MonoBehaviour
 
                 //>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>Begin Enable Or Diable Buttons
                 //More: You Can Go To Active Slide Setting (When j==i) And See PreviousButtonActive And NextButtonActive Parameter
-                PreviousButtonObject.GetComponent<Button>().interactable = PreviousButtonActive;                                        //Enable Previous Button
-                NextButtonObject.GetComponent<Button>().interactable = NextButtonActive;                                            //Enable Next Button
+                // PreviousButtonObject.GetComponent<Button>().interactable = PreviousButtonActive;                                        //Enable Previous Button
+                //  NextButtonObject.GetComponent<Button>().interactable = NextButtonActive;                                            //Enable Next Button
 
                 if (Input.GetMouseButton(0) || (Input.touchSupported && Input.touchCount == 0))
                 {
@@ -650,9 +665,6 @@ public class SliderMenu : MonoBehaviour
             //####################################################################End Previous And Next Button
         }
         //=====================================End Horizontal Slider Menu=====================================
-
-
-
 
         //=====================================Begin Vertical Slider Menu=====================================
         else if (ScrollType == scrolltype.Vertical)
@@ -786,7 +798,6 @@ public class SliderMenu : MonoBehaviour
                             {
                                 NextButtonActive = true;
                             }
-
                         }
                         //>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>End Active Slide
 
@@ -851,7 +862,6 @@ public class SliderMenu : MonoBehaviour
                                 }
                             }
                             //--------------------------------------------------------------------------------End Color Animation
-
                         }
                         //>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>End Previous Slides
 
@@ -916,14 +926,12 @@ public class SliderMenu : MonoBehaviour
                                 }
                             }
                             //--------------------------------------------------------------------------------End Color Animation
-
                         }
                         //>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>End Next Slides
                     }
                 }
             }
             //#######################################End Work On Previous Slides, Active Slide, And Next Slids
-
 
             //#############################################################################Begin Slider Magnet
             if (SliderMagnet)
@@ -945,8 +953,6 @@ public class SliderMenu : MonoBehaviour
             }
             //###############################################################################End Slider Magnet
 
-
-
             //##################################################################Begin Previous And Next Button
             if (ScrollWithButtons == true)
             {
@@ -964,8 +970,8 @@ public class SliderMenu : MonoBehaviour
 
                 //>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>Begin Enable Or Diable Buttons
                 //More: You Can Go To Active Slide Setting (When j==i) And See PreviousButtonActive And NextButtonActive Parameter
-                PreviousButtonObject.GetComponent<Button>().interactable = PreviousButtonActive;
-                NextButtonObject.GetComponent<Button>().interactable = NextButtonActive;
+                //  PreviousButtonObject.GetComponent<Button>().interactable = PreviousButtonActive;
+                // NextButtonObject.GetComponent<Button>().interactable = NextButtonActive;
 
                 if (Input.GetMouseButton(0) || (Input.touchSupported && Input.touchCount == 0))
                 {
@@ -985,11 +991,9 @@ public class SliderMenu : MonoBehaviour
                 PreviousButtonObject.GetComponent<RectTransform>().localPosition = new Vector2(0, -SliderMenuCanvas.GetComponent<RectTransform>().sizeDelta.y / 2 + PreviousButtonObject.GetComponent<RectTransform>().sizeDelta.y / 2 + Mathf.Clamp(PreviousButtonMargin.z, 0, SliderMenuCanvas.GetComponent<RectTransform>().sizeDelta.y / 2 - PreviousButtonObject.GetComponent<RectTransform>().sizeDelta.y / 2));
                 //>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>End Previous Button Position
 
-
                 //>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>Begin Next Button Position
                 NextButtonObject.GetComponent<RectTransform>().localPosition = new Vector2(0, SliderMenuCanvas.GetComponent<RectTransform>().sizeDelta.y / 2 - NextButtonObject.GetComponent<RectTransform>().sizeDelta.y / 2 - Mathf.Clamp(NextButtonMargin.x, 0, SliderMenuCanvas.GetComponent<RectTransform>().sizeDelta.y / 2 - PreviousButtonObject.GetComponent<RectTransform>().sizeDelta.y / 2));
                 //>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>End Next Button Position
-
             }
             else
             {
@@ -998,9 +1002,7 @@ public class SliderMenu : MonoBehaviour
             //####################################################################End Previous And Next Button
         }
         //======================================End Vertical Slider Menu======================================
-
     }
-
 
     //....................................Begin Next Button's Function....................................
     public void NextButton()
@@ -1016,6 +1018,7 @@ public class SliderMenu : MonoBehaviour
         k = Mathf.Clamp(k + ScrollStep, 0, 1);
         ButtonClicked = true;
     }
+
     //.....................................End Next Button's Function.....................................
 
     //..................................Begin Previous Button's Function..................................
@@ -1032,6 +1035,6 @@ public class SliderMenu : MonoBehaviour
         k = Mathf.Clamp(k - ScrollStep, 0, 1);
         ButtonClicked = true;
     }
-    //...................................End Previous Button's Function...................................
 
+    //...................................End Previous Button's Function...................................
 }
