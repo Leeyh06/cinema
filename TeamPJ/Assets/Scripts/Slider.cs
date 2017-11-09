@@ -29,9 +29,9 @@ public class Slider : MonoBehaviour
             rectTransform.localScale = new Vector3(0.25f, 1f, 1f);
         }
 
-        if (Input.GetButtonDown("Fire1"))
-        {
-            SceneManager.LoadScene(1);
-        }
+        //if (Input.GetButtonDown("Fire1"))
+        //{
+        //    SceneManager.LoadScene(1);
+        //}
     }
 }
