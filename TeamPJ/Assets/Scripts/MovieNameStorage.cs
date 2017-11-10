@@ -12,7 +12,6 @@ public class MovieNameStorage : MonoBehaviour
         DontDestroyOnLoad(this);
     }
 
-    // Update is called once per frame
     private void Update()
     {
         if (SceneManager.GetActiveScene().isLoaded)
