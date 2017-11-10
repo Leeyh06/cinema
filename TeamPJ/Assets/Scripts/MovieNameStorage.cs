@@ -9,7 +9,7 @@ public class MovieNameStorage : MonoBehaviour
     private void Start()
     {
         DontDestroyOnLoad(this);
-        movieName = Button.movieNamee;
+        movieName = NNN.Button.movieNamee;
     }
 
     // Update is called once per frame

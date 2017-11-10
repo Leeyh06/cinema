@@ -4,15 +4,18 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-public class Button : MonoBehaviour
+namespace NNN
 {
-    private Text movieName;
-    public static string movieNamee;
-
-    public void OnPosterClick()
+    public class Button : MonoBehaviour
     {
-        SceneManager.LoadScene(1);
-        movieName = GetComponentInChildren<Text>();
-        movieNamee = movieName.text;
+        private Text movieName;
+        public static string movieNamee;
+
+        public void OnPosterClick()
+        {
+            SceneManager.LoadScene(1);
+            movieName = GetComponentInChildren<Text>();
+            movieNamee = movieName.text;
+        }
     }
 }
