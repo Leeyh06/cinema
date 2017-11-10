@@ -19,9 +19,13 @@ public class TicketingInfo : MonoBehaviour
 
     void Update()
     {
-        if (true)
+        /*
+        if (PlayerPrefs.HasKey("StartTime") && PlayerPrefs.HasKey("EndTime"))
         {
+            Debug.Log(PlayerPrefs.GetString("StartTime"));
+            Debug.Log(PlayerPrefs.GetString("EndTime"));//?????....
         }
+        */
     }
 
     //버튼 오브젝트가 클릭되었을 때
