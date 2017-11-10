@@ -32,3 +32,9 @@ sysinfo.txt
 # Builds
 *.apk
 *.unitypackage
+TeamPJ/Library/metadata/00/0000000000000000c000000000000000
+*.meta
+*.ide
+TeamPJ/Library/assetDatabase3
+TeamPJ/Library/assetDatabase3
+TeamPJ/Assets/Scripts/TimeSelectButton.cs.meta
