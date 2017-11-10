@@ -14,6 +14,5 @@ public class Button : MonoBehaviour
         SceneManager.LoadScene(1);
         movieName = GetComponentInChildren<Text>();
         movieNamee = movieName.text;
-        Debug.Log(movieNamee);
     }
 }

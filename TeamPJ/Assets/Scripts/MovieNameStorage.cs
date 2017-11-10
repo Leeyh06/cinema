@@ -1,7 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class MovieNameStorage : MonoBehaviour
 {
@@ -10,12 +9,12 @@ public class MovieNameStorage : MonoBehaviour
     private void Start()
     {
         DontDestroyOnLoad(this);
+        movieName = Button.movieNamee;
     }
 
-    // private void Update()
-    // {
-    //     //SceneManager.GetActiveScene().isLoaded
-    //     movieName = Button.movieNamee;
-    //     Debug.Log(movieName);
-    // }
+    // Update is called once per frame
+    private void Update()
+    {
+        Debug.Log(movieName); //안됨!!
+    }
 }
