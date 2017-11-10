@@ -7,16 +7,29 @@ using UnityEngine.SceneManagement;
 public class ButtonClicked : MonoBehaviour
 {
     public static string Textdata;
-    private bool checkedtest;
+    private bool checkedtest = false;
 
     public void Onclicked()
     {
         Textdata = GetComponentInParent<Text>().text + GetComponentInChildren<Text>().text;
-        GetComponentInChildren<Text>().color = Color.white;
 
-        //this.
+        if (checkedtest)
+        {
+            //            GetComponent<Button>().renderer.particleSystem.tag.
+            GetComponentInChildren<Text>().color = Color.black;
+            checkedtest = false;
+        }
+        else
+        {
+            checkedtest = true;
+            GetComponentInChildren<Text>().color = Color.white;
+        }
 
-        SceneManager.LoadScene(2);
+        Debug.Log(Textdata);
+        if (SceneManager.GetActiveScene().name.Equals("SelectSeat"))
+        {
+            SceneManager.LoadScene(2);
+        }
     }
 
     // Use this for initialization
