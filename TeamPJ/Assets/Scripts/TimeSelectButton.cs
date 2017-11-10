@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class TimeSelectButton : MonoBehaviour
 {
+    /*
     private Text time;
     private Button button;
     private int startTime;
@@ -18,40 +19,45 @@ public class TimeSelectButton : MonoBehaviour
 
     public void Start()
     {
-        // time = GetComponentInChildren<Text>();
-        // button = GetComponent<Button>();
-        //
-        // for (int i = 1; i <= 2; i++)
-        // {
-        //     if (button.name.Contains("" + i))
-        //     {
-        //         startTime = Random.Range(600, 631);
-        //         endTime = startTime + runningTime;
-        //
-        //         startHour = startTime / 60;
-        //         startMinute = startTime % 60;
-        //
-        //         endHour = endTime / 60;
-        //         endMinute = endTime % 60;
-        //
-        //         if (time.name == "StartTimeText")
-        //         {
-        //             time.text = startTime + " : " + startMinute;
-        //         }
-        //         if (time.name == "EndTimeText")
-        //         {
-        //             time.text = endTime + " : " + endMinute;
-        //         }
-        //     }
-        // }
+         time = GetComponentInChildren<Text>();
+         button = GetComponent<Button>();
+
+         for (int i = 1; i <= 2; i++)
+         {
+             if (button.name.Contains("" + i))
+             {
+                 startTime = Random.Range(600, 631);
+                 endTime = startTime + runningTime;
+
+                 startHour = startTime / 60;
+                 startMinute = startTime % 60;
+
+                 endHour = endTime / 60;
+                 endMinute = endTime % 60;
+
+                 if (time.name == "StartTimeText")
+                 {
+                     time.text = startTime + " : " + startMinute;
+                 }
+                 if (time.name == "EndTimeText")
+                 {
+                     time.text = endTime + " : " + endMinute;
+                 }
+             }
+         }
 
         if (SceneManager.GetActiveScene().isLoaded)
         {
         }
     }
+    */
+
+    public Text startTime;
+    public Text endTime;
 
     public void OnClickButton()
     {
+        TicketingInfo.OnTimeButtonClicked(startTime.text, endTime.text);
         SceneManager.LoadScene("SelectSeat");
     }
 }

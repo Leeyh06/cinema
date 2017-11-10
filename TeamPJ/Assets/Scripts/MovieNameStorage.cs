@@ -15,10 +15,9 @@ public class MovieNameStorage : MonoBehaviour
     // Update is called once per frame
     private void Update()
     {
-        //  if (SceneManager.GetActiveScene().isLoaded)
-        //  {
-        //      movieName = Button.movieNamee;
-        //      Debug.Log(movieName);
-        //  }
+        if (SceneManager.GetActiveScene().isLoaded)
+        {
+            movieName = PosterButton.movieNamee;
+        }
     }
 }

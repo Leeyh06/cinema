@@ -14,3 +14,6 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/SelectSeat 1.unity
     guid: 8d8eb9989b010dc47b307fd07a4657a6
+  - enabled: 1
+    path: Assets/Scenes/SelectTime.unity
+    guid: 0e268db6f8a54fe4c92ca523ac41e0aa
