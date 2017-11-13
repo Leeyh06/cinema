@@ -20,7 +20,7 @@ MonoBehaviour:
   m_ShowMode: 4
   m_Title: 
   m_RootView: {fileID: 2}
-  m_MinSize: {x: 950, y: 471}
+  m_MinSize: {x: 950, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
 --- !u!114 &2
 MonoBehaviour:
@@ -108,10 +108,10 @@ MonoBehaviour:
     y: 30
     width: 1920
     height: 947
-  m_MinSize: {x: 913, y: 421}
+  m_MinSize: {x: 917, y: 442}
   m_MaxSize: {x: 22012, y: 10021}
   vertical: 0
-  controlID: 5779
+  controlID: 126
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -132,10 +132,10 @@ MonoBehaviour:
     y: 0
     width: 908
     height: 947
-  m_MinSize: {x: 202, y: 421}
-  m_MaxSize: {x: 4002, y: 8021}
+  m_MinSize: {x: 202, y: 442}
+  m_MaxSize: {x: 4002, y: 8042}
   vertical: 1
-  controlID: 5780
+  controlID: 105
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -207,10 +207,10 @@ MonoBehaviour:
     y: 0
     width: 308
     height: 947
-  m_MinSize: {x: 200, y: 321}
-  m_MaxSize: {x: 4004, y: 8021}
+  m_MinSize: {x: 204, y: 342}
+  m_MaxSize: {x: 4004, y: 8042}
   vertical: 1
-  controlID: 5643
+  controlID: 26
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -518,21 +518,21 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 4ea6f9ff78a7f9ffbac8f9ff34e1f9ffb8e9f9ff24ecf9ff26f3faff6eb9fbff04e7fbffc4f2fbff6a25fcff2e30feff3c45feff107afeff5080feffae81feff48f3ffffa6fbfffff4ffffff00000000ee2f00008a3a0000a63a0000c03a0000c43a0000ce3a0000e03a0000ec3a0000f63a0000023b00000c3b0000183b0000463b0000523b00005c3b0000683b0000783b0000863b0000ba3b0000c43b0000ce3b0000e43b0000f83b0000043c0000183c00002e3c0000383c0000603c0000763c0000803c0000963c0000243f000008410000fe43000040440000b6440000f84400000245000042450000b89a0000d49a0000e49a0000249b0000349b00003e9b0000d29b00001a9c00005e9c0000b89c0000029d000018bd0000fcbe000024c2000040c200004ac200005ac200005ec2000068c200007ac2000086c2000090c200009cc20000a6c20000b2c20000e0c20000ecc20000f6c2000012c3000020c3000054c300005ec3000068c300007ec3000092c300009ec30000b2c30000c8c30000d2c30000fac3000010c400001ac40000f8dd0000dcdf0000bcf70000d8f70000e8f700000af8000016f8000028f800002cf8000038f8000042f80000a6f80000baf80000d6f80000f2f8000006f9000012f900001ef9000030f900003cf900005af9000064f900006ef900007af9000086f9000092f900009ef90000aaf90000b4f90000bef9000008fa000012fa0000ee130100d4150100
+    m_ExpandedIDs: a6fbffff00000000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
-      m_Name: MovieNameText
-      m_OriginalName: MovieNameText
+      m_Name: 
+      m_OriginalName: 
       m_EditFieldRect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 0
         height: 0
-      m_UserData: 71014
+      m_UserData: 0
       m_IsWaitingForDelay: 0
       m_IsRenaming: 0
-      m_OriginalEventType: 0
+      m_OriginalEventType: 11
       m_IsRenamingFilename: 0
       m_ClientGUIView: {fileID: 10}
     m_SearchString: 
@@ -605,19 +605,19 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 0
     m_Folders:
-    - Assets/Scenes
+    - Assets/Scripts
   m_ViewMode: 1
   m_StartGridSize: 16
   m_LastFolders:
-  - Assets/Scenes
+  - Assets/Scripts
   m_LastFoldersGridSize: 16
   m_LastProjectPath: C:\Users\user\Documents\GitHub\cinema\TeamPJ
   m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 242b0000
-    m_LastClickedID: 11044
-    m_ExpandedIDs: 0000000090290000102a0000602a0000b42d000000ca9a3bffffff7f
+    m_SelectedIDs: de2a0000
+    m_LastClickedID: 10974
+    m_ExpandedIDs: 0000000098290000182a0000682a0000ce2d000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -645,7 +645,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 0000000090290000102a0000602a0000b42d000000ca9a3bffffff7f
+    m_ExpandedIDs: 0000000098290000182a0000682a0000ce2d0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -672,22 +672,22 @@ MonoBehaviour:
   m_ListAreaState:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
-    m_HadKeyboardFocusLastEvent: 1
+    m_HadKeyboardFocusLastEvent: 0
     m_ExpandedInstanceIDs: 
     m_RenameOverlay:
       m_UserAcceptedRename: 0
-      m_Name: SeatMove
-      m_OriginalName: SeatMove
+      m_Name: 
+      m_OriginalName: 
       m_EditFieldRect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 0
         height: 0
-      m_UserData: 10668
+      m_UserData: 0
       m_IsWaitingForDelay: 0
       m_IsRenaming: 0
-      m_OriginalEventType: 0
+      m_OriginalEventType: 11
       m_IsRenamingFilename: 1
       m_ClientGUIView: {fileID: 12}
     m_CreateAssetUtility:
