@@ -10,10 +10,6 @@ public class MovieNameStorage : MonoBehaviour
     private void Start()
     {
         DontDestroyOnLoad(this);
-<<<<<<< HEAD
-=======
-        movieName = NNN.Button.movieNamee;
->>>>>>> Hoon
     }
 
     private void Update()

@@ -12,7 +12,55 @@ public class ControllerClicker : MonoBehaviour
     // Use this for initialization
     private void Start()
     {
-        //string text = ButtonClicked.textdata;
+        string text = ButtonClicked.Textdata;
+        Debug.Log(text);
+        if (text.Contains("A"))
+        {
+            Vector3 x = new Vector3(1, 0, 0);
+            PlayerBox.transform.position = x;
+        };
+        if (text.Contains("1"))
+        {
+        }
+        else if (text.Contains("2"))
+        {
+        }
+        else if (text.Contains("3"))
+        {
+        }
+        else if (text.Contains("4"))
+        {
+        }
+        else if (text.Contains("5"))
+        {
+        }
+        else if (text.Contains("6"))
+        {
+        }
+        else if (text.Contains("7"))
+        {
+        }
+        else if (text.Contains("8"))
+        {
+        }
+        else if (text.Contains("9"))
+        {
+        }
+        else if (text.Contains("10"))
+        {
+        }
+        else if (text.Contains("11"))
+        {
+        }
+        else if (text.Contains("12"))
+        {
+        }
+        else if (text.Contains("13"))
+        {
+        }
+        else if (text.Contains("14"))
+        {
+        }
     }
 
     // Update is called once per frame
