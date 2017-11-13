@@ -10,6 +10,7 @@ public class MovieNameStorage : MonoBehaviour
     private void Start()
     {
         DontDestroyOnLoad(this);
+        movieName = NNN.Button.movieNamee;
     }
 
     private void Update()
